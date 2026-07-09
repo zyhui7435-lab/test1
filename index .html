@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>14天科学40分钟减脂计划｜热量食谱+文字动作详解+打卡系统</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:PingFangSC,MicrosoftYaHei,sans-serif;}
+body{background:#f8fff9;color:#333;padding-bottom:100px;line-height:1.65;}
+header{background:linear-gradient(135deg,#42b983,#63d4a0);color:#fff;padding:24px 16px;text-align:center;}
+.login-box{max-width:720px;margin:30px auto;padding:0 14px;}
+.login-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(66,185,131,0.12);}
+.container{max-width:720px;margin:0 auto;padding:0 14px;display:none;}
+.card{background:#fff;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 2px 12px rgba(66,185,131,0.12);}
+.card h2{color:#2d9968;font-size:18px;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.day-title{background:#e8f8f0;padding:10px 14px;border-radius:12px;font-weight:bold;color:#2d9968;margin:10px 0;font-size:16px;}
+.food-box,.sport-box{padding:12px;border-left:4px solid #42b983;margin:10px 0;background:#f6fdf9;border-radius:0 10px 10px 0;}
+.action-block{background:#ffffff;border:1px solid #e0efe8;border-radius:10px;padding:14px;margin:12px 0;}
+.action-title{font-weight:bold;color:#237a53;font-size:15px;margin-bottom:6px;}
+.action-desc{font-size:14px;color:#444;margin:4px 0;}
+.tag{display:inline-block;background:#d9f4e7;color:#2d9968;padding:3px 8px;border-radius:20px;font-size:12px;margin:3px;}
+.text-block{font-size:14px;color:#444;margin:8px 0;line-height:1.7;}
+.section-title{font-size:20px;margin:26px 0 12px;color:#237a53;border-bottom:2px solid #d9f4e7;padding-bottom:6px;}
+input,textarea,select{width:100%;padding:11px;margin:7px 0;border:1px solid #d8eee3;border-radius:8px;font-size:14px;}
+button{background:#42b983;color:white;border:none;padding:11px 18px;border-radius:8px;margin:7px 0;cursor:pointer;font-size:14px;}
+button.gray{background:#aaaaaa;}
+.record-item{border:1px solid #d8eee3;border-radius:10px;padding:14px;margin:9px 0;background:#f6fdf9;}
+.tab-btn-group{display:flex;gap:8px;margin:14px 0;}
+.tab-btn{flex:1;padding:9px;border-radius:8px;border:none;background:#d9f4e7;color:#2d9968;font-size:14px;}
+.tab-btn.active{background:#42b983;color:#fff;}
+.tab-panel{display:none;}
+.tab-panel.show{display:block;}
+.time-label{background:rgba(66,185,131,0.15);color:#2d9968;padding:3px 9px;border-radius:6px;font-size:13px;margin-right:8px;font-weight:500;}
+.cal-line{font-size:14px;margin:5px 0;color:#333;}
+.cal-total{font-weight:bold;color:#2d9968;margin-top:8px;padding-top:6px;border-top:1px dashed #cce9dd;}
+</style>
+</head>
+<body>
+<header>
+<h1>14天科学40分钟居家减脂全套计划</h1>
+<p>精准热量减脂食谱｜无器械文字动作详解｜本地打卡记录系统</p>
+</header>
+
+<!-- 登录注册面板 -->
+<div class="login-box" id="loginWrap">
+<div class="login-card">
+<h2 style="margin-bottom:18px;">用户登录 / 新用户注册</h2>
+<input type="text" id="username" placeholder="请输入用户名">
+<input type="password" id="pwd" placeholder="请输入登录密码">
+<button id="loginBtn">登录账号</button>
+<button id="regBtn">注册新账号</button>
+<p style="font-size:13px;color:#777;margin-top:10px;">所有打卡数据保存在本机浏览器，清除缓存记录会丢失</p>
+</div>
+</div>
+
+<!-- 登录后主内容区域 -->
+<div class="container" id="mainWrap">
+<div class="tab-btn-group">
+<button class="tab-btn active" data-tab="plan">减脂计划</button>
+<button class="tab-btn" data-tab="checkin">今日打卡</button>
+<button class="tab-btn" data-tab="records">历史打卡记录</button>
+</div>
+
+<!-- Tab1：完整14天减脂计划（热量食谱+文字动作） -->
+<div class="tab-panel show" id="tab-plan">
+<div class="card">
+<h2>📌 减脂通用饮食&运动规则（全程严格遵守）</h2>
+<div class="text-block">
+<p>1. 饮水标准：每日2000ml常温温水，三餐前300ml，禁止奶茶、果汁、碳酸饮料、酒精</p>
+<p>2. 饮食配比：1掌优质蛋白+2拳绿叶蔬菜+1拳粗粮主食，烹饪仅用橄榄油5g以内/餐</p>
+<p>3. 作息要求：23点前入睡，熬夜升高饥饿激素，大幅降低脂肪分解效率</p>
+<p>4. 运动硬性标准：每日固定40分钟三段式训练，不可跳过热身、拉伸，避免关节损伤</p>
+<p>5. 饮食禁忌：油炸、蛋糕甜品、夜宵、精加工零食、高盐腌制食品全部戒掉</p>
+<p>6. 热量区间：每日总热量控制1350-1500大卡，大基数可上浮至1600，小基数最低1300</p>
+</div>
+<div>
+<span class="tag">加餐可选：水煮蛋/黄瓜/无糖酸奶/小番茄</span>
+<span class="tag">每日运动≥40分钟</span>
+<span class="tag">少盐防水肿</span>
+<span class="tag">拒绝极端节食</span>
+</div>
+</div>
+
+<h3 class="section-title">📅 Day1 新手全身激活｜总训练时长40分钟</h3>
+<div class="food-box">
+<strong>Day1 精准热量减脂食谱</strong>
+<div class="cal-line">【早餐 326kcal】无糖燕麦50g(190kcal)+水煮鸡蛋1个(70kcal)+小番茄8颗(66kcal)</div>
+<div class="cal-line">【午餐 518kcal】杂粮饭70g熟重(185kcal)+清炒鸡胸肉100g(165kcal)+西兰花200g(68kcal)+橄榄油4g(100kcal)</div>
+<div class="cal-line">【晚餐 263kcal】凉拌黄瓜250g(40kcal)+嫩豆腐150g(123kcal)+少许生抽调味(100kcal)</div>
+<div class="cal-line">【加餐（饿了再加）72kcal】无糖酸奶80g</div>
+<div class="cal-total">当日总热量：1179kcal，可少量加餐补至1350-1450kcal区间</div>
+<p>晚餐务必19:00前吃完，无主食，降低夜间脂肪堆积</p>
+</div>
+<div class="sport-box">
+<p><span class="time-label">第一阶段：10分钟动态热身（激活关节肌肉，防拉伤）</span></p>
+<div class="action-block">
+<div class="action-title">动作1 原地高抬腿 30秒×3组，组间休息20秒</div>
+<div class="action-desc">【标准做法】直立收腹，腰背挺直，交替快速抬膝盖至髋部高度，手臂随抬腿前后自然摆动，落地前脚掌轻缓冲</div>
+<div class="action-desc">【发力要点】全程收紧核心，不要塌腰，膝盖不要内扣</div>
+<div class="action-desc">【注意事项】膝盖有旧伤降低抬腿高度，放慢速度，禁止猛砸地面</div>
+<div class="action-desc">【体感&效果】快速提升心率、打开心肺，激活大腿前侧、臀部肌群，为高强度训练预热</div>
+</div>
+<div class="action-block">
+<div class="action-title">动作2 开合跳 40秒×2组，组间休息25秒</div>
+<div class="action-desc">【标准做法】站立双脚并拢，跳跃时双脚分开宽于肩，双手头顶击掌；再次跳跃双脚收回、手臂回落身体两侧</div>
+<div class="action-desc">【发力要点】落地膝盖微弯缓冲，全程收腹，呼吸均匀不憋气</div>
+<div class="action-desc">【注意事项】体重偏大减小跳跃幅度，改为原地踏步开合，减少膝盖压力</div>
+<div class="action-desc">【体感&效果】全身多关节激活，提升全身血液循环，消除晨起身体僵硬</div>
+</div>
+
+<p style="margin-top:14px;"><span class="time-label">第二阶段：22分钟主训练·全身力量循环，3轮完整循环，每轮结束休息45秒</span></p>
+<div class="action-block">
+<div class="action-title">动作1 标准臀桥 15次×3组</div>
+<div class="action-desc">【标准做法】仰卧平躺，屈膝双脚踩实地面与髋同宽，双手贴身体两侧；呼气臀部向上顶起，肩、髋、膝盖成一条直线，顶峰停留1秒，缓慢下放臀部不贴地</div>
+<div class="action-desc">【发力要点】脚后跟主动发力，臀部夹紧，不要用腰部代偿顶髋</div>
+<div class="action-desc">【注意事项】腰部不适减小顶起高度，不要过度挺腰</div>
+<div class="action-desc">【体感&效果】臀部紧绷酸胀，改善久坐骨盆前倾，紧致臀部、大腿后侧，提升基础代谢</div>
+</div>
+<div class="action-block">
+<div class="action-title">动作2 跪姿俯卧撑 12次×3组（新手友好）</div>
+<div class="action-desc">【标准做法】双膝着地，双手略宽于肩撑地，身体从头顶到膝盖保持一条直线；屈肘胸部缓慢靠近地面，手臂发力推回起始位置</div>
+<div class="action-desc">【发力要点】核心全程收紧，不要塌腰、翘臀部</div>
+<div class="action-desc">【注意事项】手腕疼痛可握拳撑地，不要塌腰伤腰椎</div>
+<div class="action-desc">【体感&效果】胸部、手臂后侧肌肉酸胀，消除蝴蝶袖，挺拔胸型，提升上肢肌肉量</div>
+</div>
+<div class="action-block">
+<div class="action-title">动作3 平板支撑 40秒×3组</div>
+<div class="action-desc">【标准做法】手肘垂直肩膀撑地，脚尖点地，身体平直，收腹收下巴，臀部不翘不塌陷</div>
+<div class="action-desc">【发力要点】全程腹部持续收紧，呼吸匀速，不要憋气发力</div>
+<div class="action-desc">【注意事项】腰腹无力可膝盖着地简化，严禁塌腰挤压腰椎</div>
+<div class="action-desc">【体感&效果】整个腹部深层灼烧感，收紧小腹、侧腰，稳定核心，减少腰腹赘肉堆积</div>
+</div>
+
+<p style="margin-top:14px;"><span class="time-label">第三阶段：8分钟收尾静态拉伸，每个动作保持30秒，放松肌肉防结块变粗</span></p>
+<div class="action-block">
+<div class="action-title">全套肩背+大腿静态拉伸</div>
+<div class="action-desc">【标准做法】大腿前侧单腿后勾拉伸、臀部坐姿体前屈、腰背侧弯拉伸、肩颈扩胸拉伸依次完成</div>
+<div class="action-desc">【发力要点】轻柔拉伸至轻微酸胀即可，不要暴力拉扯关节</div>
+<div class="action-desc">【注意事项】拉伸不要弹跳，静态保持，避免肌肉拉伤</div>
+<div class="action-desc">【体感&效果】缓解训练后肌肉酸痛，放松紧绷肌群，防止腿部、背部肌肉僵硬粗壮，促进肌肉修复燃脂</div>
+</div>
+</div>
+
+<h3 class="section-title">📅 Day2 腰腹专项塑形｜总训练时长40分钟</h3>
+<div class="food-box">
+<strong>Day2 精准热量减脂食谱</strong>
+<div class="cal-line">【早餐 332kcal】蒸玉米半根120g(142kcal)+无糖纯牛奶250ml(110kcal)+小番茄5颗(80kcal)</div>
+<div class="cal-line">【午餐 506kcal】荞麦饭70g熟重(178kcal)+瘦牛肉80g(150kcal)+菠菜200g(68kcal)+橄榄油4g(110kcal)</div>
+<div class="cal-line">【晚餐 245kcal】菌菇清汤200g(45kcal)+水煮虾8只100g(200kcal)</div>
+<div class="cal-line">【加餐可选 65kcal】黄瓜一根</div>
+<div class="cal-total">当日基础总热量：1083kcal，加餐补足至1350-1450kcal</div>
+</div>
+<div class="sport-box">
+<p><span class="time-label">10min热身：转体侧腰拉伸、小幅高抬腿、腰部环绕</span></p>
+<div class="action-block">
+<div class="action-title">热身动作：腰部动态转体 40秒×2组</div>
+<div class="action-desc">做法：双脚与肩同宽站立，双手搭肩，左右匀速转动上半身，下半身固定不动；要点：缓慢转动，活动腰椎两侧筋膜；体感：腰侧微微发热，消除腰部僵硬</div>
+</div>
+
+<p><span class="time-label">22min腰腹主训，4轮循环，组间休息30秒</span></p>
+<div class="action-block">
+<div class="action-title">动作1 标准卷腹 20次×4组</div>
+<div class="action-desc">【标准做法】仰卧屈膝，双手轻贴太阳穴不抱头；仅腹部发力卷起上背部离开地面，缓慢下放背部不完全贴地</div>
+<div class="action-desc">【发力要点】全程下巴微收，只用上腹发力，不要用脖子拉扯头部借力</div>
+<div class="action-desc">【注意事项】颈椎不适减少起身幅度，禁止双手猛拽头部</div>
+<div class="action-desc">【体感&效果】上腹持续酸胀灼烧，专门消减上腹赘肉、小肚腩上部脂肪</div>
+</div>
+<div class="action-block">
+<div class="action-title">动作2 仰卧抬腿 15次×4组</div>
+<div class="action-desc">【标准做法】平躺背部完全贴紧地面，双腿并拢伸直，依靠下腹发力缓慢抬至45°，再缓慢下放不落地</div>
+<div class="action-desc">【发力要点】下背部全程压实地面，依靠下腹发力，不要用大腿惯性甩腿</div>
+<div class="action-desc">【注意事项】腰酸可小幅弯曲膝盖降低难度</div>
+<div class="action-desc">【体感&效果】下腹深层强烈酸胀，专门消除下腹突出小肚腩</div>
+</div>
+<div class="action-block">
+<div class="action-title">动作3 俄罗斯转体 左右各15次，合计30次×4组</div>
+<div class="action-desc">【标准做法】坐姿上半身微后倾，双脚离地；核心收紧，双手合十左右触碰地面两侧，匀速转体</div>
+<div class="action-desc">【发力要点】依靠腰侧腹斜肌发力，上半身同步转动，不要仅摆动手臂</div>
+<div class="action-desc">【注意事项】腰椎不适减小后倾角度，双脚落地简化动作</div>
+<div class="action-desc">【体感&效果】腰两侧持续紧绷，消除腰侧赘肉、改善腰部松弛游泳圈</div>
+</div>
+
+<p><span class="time-label">8min收尾：腹部、侧腰静态拉伸放松</span></p>
+<div class="action-block">
+<div class="action-title">婴儿式腹腰拉伸 保持60秒</div>
+<div class="action-desc">跪坐俯身，胸口贴向大腿，手臂向前延伸，放松整个腰腹肌群，缓解训练后腹部紧绷酸痛</div>
+</div>
+</div>
+
+<h3 class="section-title">📅 Day3 低强度有氧恢复｜总训练时长40分钟</h3>
+<div class="food-box">
+<strong>Day3 精准热量减脂食谱</strong>
+<div class="cal-line">【早餐 310kcal】全麦面包1片50g(130kcal)+水煮鸡蛋1个(70kcal)+无糖豆浆150ml(110kcal)</div>
+<div class="cal-line">【午餐 522kcal】红薯100g熟重(90kcal)+去皮鸡腿100g(182kcal)+混合时蔬250g(80kcal)+橄榄油5g(170kcal)</div>
+<div class="cal-line">【晚餐 238kcal】凉拌海带丝200g(58kcal)+嫩豆腐150g(180kcal)</div>
+<div class="cal-total">基础总热量：1070kcal，搭配少量低卡加餐补足热量缺口标准区间</div>
+</div>
+<div class="sport-box">
+<p><span class="time-label">10min轻柔热身：全身关节环绕、慢踏步活动</span></p>
+<p><span class="time-label">22min稳态低强度有氧：原地匀速持续踏步22分钟不间断</span></p>
+<div class="action-block">
+<div class="action-title">原地稳态踏步 持续22分钟无间断</div>
+<div class="action-desc">【标准做法】直立缓慢交替抬踏步，膝盖小幅抬起，手臂自然小幅摆动，全程保持微喘但能正常说话的强度</div>
+<div class="action-desc">【发力要点】全身放松，匀速平稳，不追求速度，维持稳定心率燃脂</div>
+<div class="action-desc">【注意事项】肌肉酸痛日不要加快速度，纯温和有氧促进血液循环修复肌肉</div>
+<div class="action-desc">【体感&效果】轻微出汗，心肺温和负荷，持续消耗脂肪，不损伤关节，适合训练后主动恢复日</div>
+</div>
+<p><span class="time-label">8min全身深度静态拉伸全套，放松全身酸痛肌群</span></p>
+</div>
+
+<h3 class="section-title">📅 Day4 下肢瘦腿提臀｜总训练时长40分钟</h3>
+<div class="food-box">
+<strong>Day4 精准热量减脂食谱</strong>
+<div class="cal-line">【早餐 345kcal】紫薯100g熟重(115kcal)+无糖酸奶120g(130kcal)+蓝莓30g(100kcal)</div>
+<div class="cal-line">【午餐 501kcal】杂粮饭70g熟重(185kcal)+鲜虾仁100g(96kcal)+西兰花200g(68kcal)+橄榄油5g(152kcal)</div>
+<div class="cal-line">【晚餐 212kcal】冬瓜清汤300g(32kcal)+凉拌生菜200g(180kcal)</div>
+<div class="cal-total">基础总热量1058kcal，加餐补至1380-1480kcal</div>
+</div>
+<div class="sport-box">
+<p><span class="time-label">10min下肢专项热身：弓步走、脚踝环绕、动态侧摆腿</span></p>
+<p><span class="time-label">22min臀腿主训，3轮完整循环，组间休息40秒</span></p>
+<div class="action-block">
+<div class="action-title">动作1 标准徒手深蹲 15次×3组</div>
+<div class="action-desc">【标准做法】双脚与肩同宽，脚尖微向外15°，腰背挺直；臀部向后向下坐至大腿平行地面，脚跟发力直立站起</div>
+<div class="action-desc">【发力要点】膝盖对齐脚尖，不内扣、不超过脚尖，臀部主动向后坐</div>
+<div class="action-desc">【注意事项】膝盖有损伤减少下蹲深度，不要弯腰塌背</div>
+<div class="action-desc">【体感&效果】大腿、臀部紧绷酸胀，紧致大腿线条、提升臀部，改善扁平臀、大腿松弛</div>
+</div>
+<div class="action-block">
+<div class="action-title">动作2 蚌式开合 每侧16次×3组</div>
+<div class="action-desc">【标准做法】侧卧双腿屈膝并拢，双脚脚跟贴合；上方膝盖缓慢向上打开再缓慢合拢，骨盆全程保持稳定不动</div>
+<div class="action-desc">【发力要点】臀部外侧主动发力，不要晃动腰部、骨盆</div>
+<div class="action-desc">【注意事项】动作缓慢控制，不要快速甩腿</div>
+<div class="action-desc">【体感&效果】臀部外侧深层酸胀，改善假胯宽、臀两侧凹陷，优化下半身比例</div>
+</div>
+<div class="action-block">
+<div class="action-title">动作3 侧卧抬腿 每侧14次×3组</div>
+<div class="action-desc">【标准做法】侧卧下腿微屈膝，上腿伸直缓慢向上抬30°，缓慢下放不落地，骨盆固定不动</div>
+<div class="action-desc">【发力要点】大腿外侧主动发力，核心收紧稳定躯干</div>
+<div class="action-desc">【注意事项】不要依靠腰部借力抬腿</div>
+<div class="action-desc">【体感&效果】大腿外侧灼烧酸胀，消除大腿外侧赘肉，优化腿部线条</div>
+</div>
+<p><span class="time-label">8min大腿、臀部专项拉伸放松，防止腿粗肌肉结块</span></p>
+</div>
+
+<h3 class="section-title">📅 Day5 HIIT高效间歇燃脂｜总训练时长40分钟</h3>
+<div class="food-box">
+<strong>Day5 精准热量减脂食谱</strong>
+<div class="cal-line">【早餐 320kcal】纯燕麦60g(200kcal)+水煮鸡蛋1个(70kcal)+小番茄少许(50kcal)</div>
+<div class="cal-line">【午餐 535kcal】糙米饭70g熟重(185kcal)+清蒸鲈鱼100g(100kcal)+油麦菜250g(80kcal)+橄榄油5g(170kcal)</div>
+<div class="cal-line">【晚餐 246kcal】番茄金针菇清汤250g(46kcal)+鸡胸肉丝60g(200kcal)</div>
+<div class="cal-total">基础总热量1101kcal，加餐补足至1400-1500kcal</div>
+</div>
+<div class="sport-box">
+<p><span class="time-label">10min充分全身热身（高强度训练必须完整热身，杜绝拉伤）</span></p>
+<p><span class="time-label">22min HIIT间歇循环，6轮：40秒全力运动+20秒完全休息</span></p>
+<div class="action-block">
+<div class="action-title">动作1 登山跑 每轮40秒</div>
+<div class="action-desc">【标准做法】平板支撑基础姿态，手肘撑地，交替快速提膝向胸口靠近，核心全程收紧，臀部不抬高</div>
+<div class="action-desc">【发力要点】下腹持续收紧，依靠腹部力量带动腿部交替运动，不要塌腰</div>
+<div class="action-desc">【注意事项】腰腹力量不足可放慢交替速度，不要塌腰挤压腰椎</div>
+<div class="action-desc">【体感&效果】心肺快速飙升、下腹强烈灼烧，短时间超高热量消耗，同时雕刻下腹线条</div>
+</div>
+<div class="action-block">
+<div class="action-title">动作2 深蹲跳 每轮40秒</div>
+<div class="action-desc">【标准做法】标准深蹲姿态蹲至大腿平行地面，脚跟发力轻轻向上跳跃，落地膝盖微弯缓冲，立刻进入下一次深蹲</div>
+<div class="action-desc">【发力要点】臀部、大腿同时发力起跳，落地轻柔缓冲，全程收腹</div>
+<div class="action-desc">【注意事项】体重偏大取消跳跃，改为标准深蹲，保护膝关节</div>
+<div class="action-desc">【体感&效果】全身暴汗，心率快速拉高，短时间消耗大量全身脂肪，提升后燃效应</div>
+</div>
+<p><span class="time-label">8min全身降温静态拉伸，缓慢降低心率，放松紧绷肌群</span></p>
+</div>
+
+<h3 class="section-title">📅 Day6 开肩美背矫正圆肩｜总训练时长40分钟</h3>
+<div class="food-box">
+<strong>Day6 精准热量减脂食谱</strong>
+<div class="cal-line">【早餐 305kcal】甜玉米半根100g(125kcal)+纯牛奶250ml(110kcal)+水煮蛋半个(70kcal)</div>
+<div class="cal-line">【午餐 486kcal】少油荞麦干面70g熟重(196kcal)+混合绿叶青菜300g(90kcal)+橄榄油4g(200kcal)</div>
+<div class="cal-line">【晚餐 224kcal】黄瓜200g(32kcal)+嫩豆腐沙拉150g(192kcal)</div>
+<div class="cal-total">基础总热量1015kcal，搭配低卡加餐补足标准减脂热量</div>
+</div>
+<div class="sport-box">
+<p><span class="time-label">10min肩颈专项热身：肩部绕环、扩胸动态活动</span></p>
+<p><span class="time-label">22min肩背塑形训练，4组完整循环</span></p>
+<div class="action-block">
+<div class="action-title">动作 YTWL字母伸展 每个姿势12次×4组</div>
+<div class="action-desc">【标准做法】双脚分开与肩同宽，上半身俯身45°，腰背平直；手臂依次摆出Y/T/W/L四种字母姿态，缓慢抬起后缓慢下放</div>
+<div class="action-desc">【发力要点】后背中间肌群主动夹紧，肩胛骨向内收拢，不要耸肩发力</div>
+<div class="action-desc">【注意事项】全程不要弓背弯腰，腰部保持平直稳定</div>
+<div class="action-desc">【体感&效果】后背中间酸胀发热，改善圆肩驼背、溜肩，收紧后背多余脂肪，打造薄背体态</div>
+</div>
+<div class="action-block">
+<div class="action-title">动作 靠墙天使 15次×4组</div>
+<div class="action-desc">【标准做法】后背、后脑勺完全贴紧墙面，手肘弯曲90°贴墙；手臂缓慢向上滑动至头顶，再缓慢下滑至腰部</div>
+<div class="action-desc">【发力要点】全程手肘、手腕贴紧墙面，依靠背部发力带动手臂移动</div>
+<div class="action-desc">【注意事项】不要耸肩、抬离墙面，动作匀速缓慢控制</div>
+<div class="action-desc">【体感&效果】胸腔打开、后背收紧，改善含胸驼背，消除后背赘肉、富贵包</div>
+</div>
+<p><span class="time-label">8min肩颈背部深度拉伸放松，缓解久坐肩颈僵硬酸痛</span></p>
+</div>
+
+<h3 class="section-title">📅 Day7 主动恢复休息日｜总训练时长40分钟（低强度修复）</h3>
+<div class="food-box">
+<strong>Day7 精准热量减脂食谱（休息日可轻微上调热量）</strong>
+<div class="cal-line">【早餐 316kcal】全麦面包1片(130kcal)+水煮鸡蛋1个(70kcal)+无糖豆浆120ml(116kcal)</div>
+<div class="cal-line">【午餐 540kcal】家常清淡餐，米饭50g熟重(130kcal)+瘦猪肉80g(160kcal)+混合蔬菜300g(100kcal)+橄榄油6g(150kcal)</div>
+<div class="cal-line">【晚餐 255kcal】少油蔬菜豆腐锅（豆腐120g+各类绿叶菌菇300g，255kcal）</div>
+<div class="cal-total">基础总热量1111kcal，休息日可加餐至1450-1550kcal</div>
+</div>
+<div class="sport-box">
+<p><span class="time-label">10min轻柔全身关节活动，无高强度动作</span></p>
+<p><span class="time-label">22min舒缓动态瑜伽流动/原地慢走，低强度促进肌肉修复，不制造肌肉疲劳</span></p>
+<p><span class="time-label">8min全套静态深度拉伸，全身肌群完整放松，为第二周训练储备体能</span></p>
+</div>
+
+<h3 class="section-title">📅 Day8-Day14 第二周强化减脂（统一40分钟三段式，训练强度提升突破平台期）</h3>
+<div class="card">
+<div class="day-title">Day8 全身循环强化燃脂｜40分钟完整训练</div>
+<div class="food-box">
+<strong>热量食谱总览</strong>早餐330kcal燕麦鸡蛋组合｜午餐525kcal杂粮饭瘦牛肉时蔬｜晚餐230kcal凉拌青菜虾仁，基础总热量1085kcal
+</div>
+<div class="sport-box">
+<p><span class="time-label">10min全身动态热身 + 22min深蹲+平板+开合跳循环训练3轮 + 8min全身拉伸</span></p>
+<div class="action-block">
+<div class="action-title">全身循环组合：深蹲18次+平板50秒+开合跳45秒为一轮，循环3轮</div>
+<div class="action-desc">进阶训练，提升每组次数与持续时长，增加肌肉消耗，突破第一周减脂平台期；体感训练后全身酸胀，持续燃脂时间延长</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="day-title">Day9 深层腰腹强化塑形｜40分钟</div>
+<div class="food-box">早餐322kcal玉米牛奶｜午餐510kcal虾仁西兰花杂粮饭｜晚餐228kcal菌菇清汤，总热量1060kcal</div>
+<div class="sport-box">10min腰腹热身 + 22min进阶腹训（卷腹22次、抬腿18次、转体35次/组）+8min腹腰拉伸，强化深层腹部肌群，消除顽固小腹赘肉</div>
+</div>
+<div class="card">
+<div class="day-title">Day10 提臀瘦腿进阶训练｜40分钟</div>
+<div class="food-box">早餐348kcal紫薯无糖酸奶｜午餐530kcal去皮鸡腿杂粮饭｜晚餐205kcal冬瓜清汤，总热量1083kcal</div>
+<div class="sport-box">10min下肢热身 + 22min臀腿进阶（深蹲20次、蚌式20次/侧、抬腿18次/侧）+8min臀腿拉伸，紧致假胯宽、松弛大腿、扁平臀部</div>
+</div>
+<div class="card">
+<div class="day-title">Day11 进阶HIIT高强度燃脂｜40分钟</div>
+<div class="food-box">早餐326kcal燕麦鸡蛋｜午餐532kcal清蒸鱼青菜杂粮饭｜晚餐235kcal番茄豆腐汤，总热量1093kcal</div>
+<div class="sport-box">10min充分热身 + 22min进阶HIIT（45秒运动/15秒休息，7轮循环）+8min降温拉伸，大幅提升后燃效应，高效消耗全身脂肪</div>
+</div>
+<div class="card">
+<div class="day-title">Day12 体态矫正综合塑形｜40分钟</div>
+<div class="food-box">早餐312kcal全麦牛奶｜午餐495kcal少油荞麦面青菜｜晚餐218kcal凉拌海带丝，总热量1025kcal</div>
+<div class="sport-box">10min肩颈热身 + 22min进阶开肩美背训练 + 8min肩颈拉伸，兼顾轻度燃脂与体态矫正，改善久坐驼背圆肩</div>
+</div>
+<div class="card">
+<div class="day-title">Day13 全身综合塑形冲刺｜40分钟</div>
+<div class="food-box">早餐335kcal玉米鸡蛋｜午餐540kcal杂粮饭瘦牛肉沙拉｜晚餐226kcal清爽蔬菜沙拉，总热量1101kcal</div>
+<div class="sport-box">10min全身热身 + 22min全身力量有氧混合循环训练 + 8min全身拉伸，全肌群覆盖，巩固14天减脂塑形线条</div>
+</div>
+<div class="card">
+<div class="day-title">Day14 14天周期收官舒缓恢复｜40分钟</div>
+<div class="food-box">自由清淡低油低盐餐食，全天总热量控制1400kcal以内，禁止油炸甜食夜宵</div>
+<div class="sport-box">10min轻柔关节活动 + 22min低强度慢走有氧 + 8min完整全身深度拉伸，周期收尾放松肌肉，缓解两周训练疲劳，维持代谢稳定</div>
+</div>
+
+<h3 class="section-title">🥗 减脂常备食材采购清单（搭配热量参考）</h3>
+<div class="card">
+<div><strong>优质蛋白（低卡高代谢）</strong>
+<div>
+<span class="tag">鸡蛋(70kcal/个)</span><span class="tag">鸡胸肉(165kcal/100g)</span><span class="tag">鱼虾(90-120kcal/100g)</span>
+<span class="tag">嫩豆腐(120kcal/150g)</span><span class="tag">无糖酸奶(110kcal/100g)</span><span class="tag">瘦牛肉(150kcal/100g)</span>
+</div>
+</div>
+<div style="margin-top:12px"><strong>粗粮主食（缓释碳水不囤脂）</strong>
+<div>
+<span class="tag">燕麦(190kcal/50g干)</span><span class="tag">玉米(130kcal/100g)</span><span class="tag">紫薯(115kcal/100g)</span>
+<span class="tag">荞麦(180kcal/70g熟)</span><span class="tag">糙米(185kcal/70g熟)</span><span class="tag">杂粮饭</span>
+</div>
+</div>
+<div style="margin-top:12px"><strong>不限量低卡绿叶蔬菜（50-90kcal/200g）</strong>
+<div>
+<span class="tag">西兰花</span><span class="tag">黄瓜</span><span class="tag">生菜</span><span class="tag">菠菜</span><span class="tag">冬瓜</span><span class="tag">菌菇</span><span class="tag">海带</span>
+</div>
+</div>
+</div>
+
+<h3 class="section-title">⚠️ 减脂科学误区科普（避坑）</h3>
+<div class="card">
+<div class="text-block">
+<p>1. 只吃素不会瘦：缺少蛋白质会大幅降低基础代谢，极易反弹、脱发、姨妈紊乱</p>
+<p>2. 完全断主食：诱发暴食、乏力、掉头发、内分泌失调，减脂无法长期坚持</p>
+<p>3. 出汗多=燃脂：出汗仅流失水分，心率维持60%-70%最大心率才会高效分解脂肪</p>
+<p>4. 极端快速节食：减掉全部是水分，恢复正常饮食3天内快速复胖</p>
+<p>5. 跳过热身/拉伸：极易造成膝盖、腰椎、肩颈永久性运动损伤</p>
+<p>6. 运动时长不足40分钟：人体前20分钟主要消耗糖原，40分钟后脂肪供能占比显著提升，减脂效率翻倍</p>
+<p>7. 晚餐吃太晚：19点后进食脂肪分解效率下降70%，腰腹极易堆积脂肪</p>
+</div>
+</div>
+
+<h3 class="section-title">✨ 减脂打卡复制文案（发朋友圈/备忘录）</h3>
+<div class="card">
+<div class="text-block">
+<p>▪ 短期克制，长期自由，瘦下来穿搭不受任何限制</p>
+<p>▪ 减脂第X天，每日40分钟标准三段式训练，精准热量三餐，健康稳步蜕变</p>
+<p>▪ 不挨饿不极端，控制热量+科学运动，温和减脂永久不反弹</p>
+<p>▪ 今日低脂热量餐+完整40分钟训练打卡，拒绝奶茶油炸夜宵高糖食物</p>
+<p>▪ 坚持热身+主训+拉伸完整流程，科学运动不伤关节，线条紧致好看</p>
+</div>
+</div>
+</div>
+
+<!-- Tab2：今日打卡填写面板 -->
+<div class="tab-panel" id="tab-checkin">
+<div class="card">
+<h2>📝 今日减脂打卡记录（数据本地永久保存）</h2>
+<input type="number" id="weight" placeholder="今日晨起空腹体重(kg)" step="0.01">
+<select id="foodOk">
+<option value="">今日三餐是否按热量低脂标准执行</option>
+<option value="是">全部达标，热量控制合规</option>
+<option value="部分">部分饮食热量超标</option>
+<option value="否">高热量饮食超标严重</option>
+</select>
+<input type="number" id="sportTime" placeholder="今日实际完成运动总时长(分钟)">
+<select id="waterOk">
+<option value="">每日2000ml饮水是否达标</option>
+<option value="是">饮水量达标</option>
+<option value="否">饮水不足</option>
+</select>
+<select id="sleepOk">
+<option value="">是否23点前早睡不熬夜</option>
+<option value="是">按时早睡</option>
+<option value="否">熬夜</option>
+</select>
+<textarea id="thoughts" rows="4" placeholder="填写今日减脂心得、运动体感、次日饮食运动调整计划"></textarea>
+<button id="saveCheckinBtn">保存今日全部打卡记录</button>
+</div>
+</div>
+
+<!-- Tab3：历史打卡记录查看 -->
+<div class="tab-panel" id="tab-records">
+<div class="card">
+<h2>📋 个人全部历史打卡记录（按时间倒序）</h2>
+<div id="recordList"></div>
+<button id="clearAllBtn" class="gray">一键清空本人所有打卡记录（不可恢复）</button>
+</div>
+</div>
+</div>
+
+<script>
+// 本地存储标识
+const USER_KEY = "fit_user_data_14day";
+const RECORD_KEY = "fit_checkin_record_list";
+let currentLoginUser = null;
+
+// 标签切换逻辑
+const tabButtons = document.querySelectorAll(".tab-btn");
+tabButtons.forEach(btn=>{
+    btn.onclick = function(){
+        tabButtons.forEach(b=>b.classList.remove("active"));
+        this.classList.add("active");
+        const targetTab = this.dataset.tab;
+        document.querySelectorAll(".tab-panel").forEach(panel=>panel.classList.remove("show"));
+        document.getElementById("tab-" + targetTab).classList.add("show");
+        if(targetTab === "records") renderAllRecords();
+    }
+})
+
+// 用户账号读写函数
+function getAllUserInfo(){
+    const raw = localStorage.getItem(USER_KEY);
+    return raw ? JSON.parse(raw) : {};
+}
+function saveUserInfo(userObj){
+    localStorage.setItem(USER_KEY, JSON.stringify(userObj));
+}
+
+// 注册按钮事件
+document.getElementById("regBtn").onclick = function(){
+    const username = document.getElementById("username").value.trim();
+    const pwd = document.getElementById("pwd").value.trim();
+    if(!username || !pwd){
+        alert("用户名和密码不能为空，请填写完整");
+        return;
+    }
+    const userList = getAllUserInfo();
+    if(userList[username]){
+        alert("该账号已注册，请直接登录");
+        return;
+    }
+    userList[username] = {password:pwd};
+    saveUserInfo(userList);
+    alert("注册成功，请登录账号使用打卡功能");
+}
+
+// 登录按钮事件
+document.getElementById("loginBtn").onclick = function(){
+    const username = document.getElementById("username").value.trim();
+    const pwd = document.getElementById("pwd").value.trim();
+    const userList = getAllUserInfo();
+    if(!userList[username]){
+        alert("账号不存在，请先注册");
+        return;
+    }
+    if(userList[username].password !== pwd){
+        alert("密码输入错误，请重新输入");
+        return;
+    }
+    currentLoginUser = username;
+    document.getElementById("loginWrap").style.display = "none";
+    document.getElementById("mainWrap").style.display = "block";
+    renderAllRecords();
+}
+
+// 打卡记录读写
+function getAllCheckinRecords(){
+    const raw = localStorage.getItem(RECORD_KEY);
+    return raw ? JSON.parse(raw) : [];
+}
+function saveAllRecords(recordArr){
+    localStorage.setItem(RECORD_KEY, JSON.stringify(recordArr));
+}
+
+// 保存今日打卡
+document.getElementById("saveCheckinBtn").onclick = function(){
+    if(!currentLoginUser) return;
+    const weight = document.getElementById("weight").value;
+    const foodStandard = document.getElementById("foodOk").value;
+    const sportMin = document.getElementById("sportTime").value;
+    const waterStandard = document.getElementById("waterOk").value;
+    const sleepStandard = document.getElementById("sleepOk").value;
+    const thoughtText = document.getElementById("thoughts").value.trim();
+    if(!weight || !foodStandard || !sportMin || !waterStandard || !sleepStandard){
+        alert("请完整填写所有打卡项目，不可留空");
+        return;
+    }
+    const singleRecord = {
+        user: currentLoginUser,
+        createTime: new Date().toLocaleString(),
+        weight: weight,
+        foodStatus: foodStandard,
+        sportTime: sportMin,
+        waterStatus: waterStandard,
+        sleepStatus: sleepStandard,
+        note: thoughtText
+    };
+    const allRecords = getAllCheckinRecords();
+    allRecords.push(singleRecord);
+    saveAllRecords(allRecords);
+    alert("打卡记录保存成功，可切换至历史记录查看");
+    // 清空表单
+    document.getElementById("weight").value = "";
+    document.getElementById("sportTime").value = "";
+    document.getElementById("thoughts").value = "";
+    document.getElementById("foodOk").value = "";
+    document.getElementById("waterOk").value = "";
+    document.getElementById("sleepOk").value = "";
+    renderAllRecords();
+}
+
+// 渲染历史打卡列表
+function renderAllRecords(){
+    const wrapDom = document.getElementById("recordList");
+    wrapDom.innerHTML = "";
+    const allRecords = getAllCheckinRecords().filter(item=>item.user === currentLoginUser);
+    if(allRecords.length === 0){
+        wrapDom.innerHTML = "<p style='color:#777;text-align:center'>暂无任何打卡记录，前往「今日打卡」页面记录你的减脂数据</p>";
+        return;
+    }
+    allRecords.reverse().forEach(item=>{
+        const div = document.createElement("div");
+        div.className = "record-item";
+        div.innerHTML = `
+            <p><strong>打卡时间：${item.createTime}</strong></p>
+            <p>晨起体重：${item.weight}kg | 三餐热量达标：${item.foodStatus}</p>
+            <p>当日运动时长：${item.sportTime}分钟 | 饮水2000ml达标：${item.waterStatus}</p>
+            <p>23点前早睡：${item.sleepStatus}</p>
+            <p>减脂心得：${item.note}</p>
+        `;
+        wrapDom.appendChild(div);
+    })
+}
+
+// 清空全部个人打卡记录
+document.getElementById("clearAllBtn").onclick = function(){
+    if(!confirm("确认永久清空你所有打卡记录？删除后无法恢复！")) return;
+    let allRecords = getAllCheckinRecords();
+    allRecords = allRecords.filter(item=>item.user !== currentLoginUser);
+    saveAllRecords(allRecords);
+    renderAllRecords();
+    alert("你的全部打卡记录已清空");
+}
+</script>
+</body>
+</html>
